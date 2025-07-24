@@ -27,7 +27,7 @@ public class UserActivity extends MVPBaseActivity<UserContract.View, UserPresent
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
         tv_name = findViewById(R.id.tv_name);
-        KLog.e("TAG", "=====111111");
+        KLog.e("TAG", "=====11111111");
         mPresenter.getUserInfo();
     }
 
