@@ -17,8 +17,12 @@ public abstract class MVPBaseActivity<V extends BaseView,T extends BasePresenter
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(setContentLayout());
         mPresenter= getInstance(this,1);
         mPresenter.attachView((V) this);
+
+        initData(savedInstanceState);
+        onDestroyActivity();
     }
 
     @Override
@@ -48,4 +52,12 @@ public abstract class MVPBaseActivity<V extends BaseView,T extends BasePresenter
         }
         return null;
     }
+
+    //下面这5个方法是子类必须实现的，分别是layout布局、toolbar、mvp的persenter初始化、
+    //onCreate内的initData、以及页面销毁的onDestroyActivity（可以根据自己的需要添加）
+    public abstract int setContentLayout();
+
+    public abstract void initData(Bundle savedInstanceState);
+
+    public abstract void onDestroyActivity();
 }

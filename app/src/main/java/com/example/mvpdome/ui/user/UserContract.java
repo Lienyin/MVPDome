@@ -3,6 +3,7 @@ package com.example.mvpdome.ui.user;
 import android.content.Context;
 
 import com.example.mvpdome.bean.UserInfoEntity;
+import com.example.mvpdome.bean.WallPaperResponse;
 import com.example.mvpdome.mvp.BasePresenter;
 import com.example.mvpdome.mvp.BaseView;
 
@@ -12,7 +13,7 @@ import com.example.mvpdome.mvp.BaseView;
 
 public class UserContract {
     interface View extends BaseView {
-        void userInfoCallBack(UserInfoEntity userInfo);
+        void userInfoCallBack(WallPaperResponse.ResBean data);
     }
 
     interface  Presenter extends BasePresenter<View> {

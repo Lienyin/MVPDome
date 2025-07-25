@@ -57,9 +57,8 @@ public class UserPresenter extends BasePresenterImpl<UserContract.View> implemen
                         List<WallPaperResponse.ResBean.VerticalBean> vertical = wallPaperResponse.getRes().getVertical();
                         if (vertical != null && vertical.size() > 0) {
                             String imgUrl = vertical.get(0).getImg();
-                            KLog.e("TAG", "imgUrl==="+imgUrl);
                             //Glide.with(MainActivity.this).load(imgUrl).into(imageView);
-                            mView.userInfoCallBack(new UserInfoEntity("张三", "18"));
+                            mView.userInfoCallBack(wallPaperResponse.getRes());
                         } else {
                             KLog.e("TAG", "数据为空");
                             //Toast.makeText(this, "数据为空", Toast.LENGTH_SHORT).show();

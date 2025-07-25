@@ -60,4 +60,6 @@ dependencies {
     implementation(libs.rxandroid)
     implementation(libs.rxjava)
     implementation(libs.preference)
+
+    implementation(libs.glide)
 }

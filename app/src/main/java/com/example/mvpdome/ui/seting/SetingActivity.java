@@ -21,4 +21,19 @@ public class SetingActivity extends MVPBaseActivity<SetingContract.View, SetingP
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_seting);
     }
+
+    @Override
+    public int setContentLayout() {
+        return 0;
+    }
+
+    @Override
+    public void initData(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    public void onDestroyActivity() {
+
+    }
 }
