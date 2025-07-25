@@ -42,6 +42,8 @@ public class RequestInterceptor implements Interceptor {
         builder.addHeader("appVersionName",this.iNetworkRequiredInfo.getAppVersionName());
         //添加日期时间
         builder.addHeader("datetime",nowDateTime);
+        //添加token
+        builder.addHeader("Authorization", "token");
         //返回
         return chain.proceed(builder.build());
     }
